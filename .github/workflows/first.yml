@@ -9,13 +9,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  simple:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
         run: echo Hello, world!
+      - name: Run if test success
+        if: steps.test.outcome == 'success'
+        run: echo "Test Success!"
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - id: generate-number
+        run: echo "number=$(echo $RANDOM)" >> "$GITHUB_OUTPUT"
+      - id: use-number
+        run: echo "The number is ${{ steps.generate-number.outputs.number }}"
