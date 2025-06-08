@@ -68,4 +68,4 @@ jobs:
     if: ${{ needs.random-number-generator.outputs.is-even == 'true' }}
     steps:
       - run: echo "The number ${{ needs.random-number-generator.outputs.number }} is even"
-      - run: echo "save successfully"
+      - run: echo "save successfully."
