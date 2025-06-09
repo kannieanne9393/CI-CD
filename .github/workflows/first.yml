@@ -70,3 +70,4 @@ jobs:
       - run: echo "The number ${{ needs.random-number-generator.outputs.number }} is even"
       - run: echo "save successfully."
       - run: echo "save successfully by main."
+      - run: echo "save successfully by main2."
