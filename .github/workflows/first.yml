@@ -69,10 +69,6 @@ jobs:
     steps:
       - run: echo "The number ${{ needs.random-number-generator.outputs.number }} is even"
       - run: echo "save successfully."
-<<<<<<< HEAD
       - run: echo "save successfully by main."
       - run: echo "save successfully by main2."
       - run: echo "save successfully by nisarg."
-=======
-      - run: echo "save successfully by main."
->>>>>>> 20a8c48 (by main)
